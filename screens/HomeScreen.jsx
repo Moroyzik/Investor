@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionTitle, Appointment } from "../components/index";
-import { StyleSheet, Text, View, Image, SectionList } from "react-native";
+import { SectionList } from "react-native";
 import styled from "styled-components/native";
 import { Ionicons } from "@expo/vector-icons";
 
