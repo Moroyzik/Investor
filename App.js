@@ -32,7 +32,7 @@ const AppNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: "Patient",
+    initialRouteName: "Home",
   }
 );
 

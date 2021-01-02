@@ -1,26 +1,33 @@
 import React from "react";
+import { View } from "react-native";
 import styled from "styled-components/native";
 import { Foundation } from "@expo/vector-icons";
 
 import { Button } from "../components";
 
-const PatientScreen = () => {
+const PatientScreen = ({ navigation }) => {
   return (
-    <Container>
-      <PatientFullname>Дарья Краснова</PatientFullname>
-      <GrayPhone>+7 (999) 444-22-33</GrayPhone>
-      <PatientButtons>
-        <ButtonView>
-          <Button>Формула зубов</Button>
-        </ButtonView>
+    <View style={{ felx: 1 }}>
+      <Container>
+        <PatientFullname>
+          {navigation.getParam("user").fullName}
+        </PatientFullname>
+        <GrayPhone>+7 (999) 444-22-33</GrayPhone>
+        <PatientButtons>
+          <ButtonView>
+            <Button>Формула зубов</Button>
+          </ButtonView>
 
-        <ButtonPhoneView>
-          <Button color="#84d269">
-            <Foundation name="telephone" size={28} color="white" />
-          </Button>
-        </ButtonPhoneView>
-      </PatientButtons>
-    </Container>
+          <ButtonPhoneView>
+            <Button color="#84d269">
+              <Foundation name="telephone" size={28} color="white" />
+            </Button>
+          </ButtonPhoneView>
+        </PatientButtons>
+      </Container>
+
+      <PatientAppointments></PatientAppointments>
+    </View>
   );
 };
 
@@ -32,14 +39,13 @@ const ButtonView = styled.View`
   flex: 1;
 `;
 
-const ButtonPhoneView = styled.View`
-  margin-left: 10px;
-  width: 45px;
+const PatientAppointments = styled.View`
+  flex: 1;
+  background: #8b979f;
 `;
 
-const PhoneButton = styled(Button)`
-  /* background: ; */
-  height: 45px;
+const ButtonPhoneView = styled.View`
+  margin-left: 10px;
   width: 45px;
 `;
 

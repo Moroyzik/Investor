@@ -131,7 +131,9 @@ const HomeScreen = (props) => {
       <SectionList
         sections={DATA}
         keyExtractor={(index) => index}
-        renderItem={({ item }) => <Appointment navigate={navigation.navigate} {...item} />}
+        renderItem={({ item }) => (
+          <Appointment navigate={navigation.navigate} item={item} />
+        )}
         renderSectionHeader={({ section: { title } }) => (
           <SectionTitle>{title}</SectionTitle>
         )}
@@ -144,8 +146,6 @@ const HomeScreen = (props) => {
 };
 
 export default HomeScreen;
-
-
 
 const PlusButton = styled.TouchableOpacity`
   align-items: center;

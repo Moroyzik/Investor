@@ -2,9 +2,11 @@ import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 
-const Group = ({ user, diagnosis, active, time, navigate }) => {
+const Appointment = ({ navigate, item }) => {
+  const { user, diagnosis, active, time } = item;
+
   return (
-    <GroupItem onPress={() => navigate('Patient')}>
+    <GroupItem onPress={() => navigate("Patient", item)}>
       <Avatar
         source={{
           uri: user.avatar,
@@ -21,7 +23,7 @@ const Group = ({ user, diagnosis, active, time, navigate }) => {
   );
 };
 
-Group.defaultProps = {
+Appointment.defaultProps = {
   groupTitel: "Untitled",
   items: [],
 };
@@ -63,4 +65,4 @@ const GroupDate = styled.Text`
   height: 32px;
 `;
 
-export default Group;
+export default Appointment;
