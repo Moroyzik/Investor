@@ -7,12 +7,12 @@ import { Button } from "../components";
 
 const PatientScreen = ({ navigation }) => {
   return (
-    <View style={{ felx: 1 }}>
+    <View style={{ flex: 1 }}>
       <Container>
         <PatientFullname>
           {navigation.getParam("user").fullName}
         </PatientFullname>
-        <GrayPhone>+7 (999) 444-22-33</GrayPhone>
+        <GrayPhone>{navigation.getParam("user").phone}</GrayPhone>
         <PatientButtons>
           <ButtonView>
             <Button>Формула зубов</Button>

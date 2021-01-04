@@ -13,6 +13,7 @@ const DATA = [
         diagnosis: "пульпит",
         active: true,
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Дима Морозов",
           avatar:
             "https://images.unsplash.com/photo-1578489758854-f134a358f08b?ixlib=rb-1.2.1&w=1000&q=80",
@@ -22,6 +23,7 @@ const DATA = [
         time: "17:30",
         diagnosis: "повторный осмотр",
         user: {
+          phone: "+7 (999) 123-23-45",
           fullName: "Халк Николаев",
           avatar:
             "https://images.immediate.co.uk/production/volatile/sites/3/2017/10/TRB1420_comp_v422.1056-8e99dab.jpg?quality=90&resize=768,574",
@@ -36,6 +38,7 @@ const DATA = [
         time: "09:30",
         diagnosis: "удаление зуба",
         user: {
+          phone: "+7 (999) 123-99-33",
           fullName: "Василий Петров",
           avatar:
             "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
@@ -45,6 +48,7 @@ const DATA = [
         time: "14:30",
         diagnosis: "повторный осмотр",
         user: {
+          phone: "+7 (999) 123-11-00",
           fullName: "Илон Маск",
           avatar:
             "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
@@ -59,6 +63,7 @@ const DATA = [
         time: "09:30",
         diagnosis: "удаление зуба",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Василий Петров",
           avatar:
             "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
@@ -68,6 +73,7 @@ const DATA = [
         time: "14:30",
         diagnosis: "повторный осмотр",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Илон Маск",
           avatar:
             "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
@@ -82,6 +88,7 @@ const DATA = [
         time: "09:30",
         diagnosis: "удаление зуба",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Василий Петров",
           avatar:
             "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
@@ -91,6 +98,7 @@ const DATA = [
         time: "14:30",
         diagnosis: "повторный осмотр",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Илон Маск",
           avatar:
             "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
@@ -105,6 +113,7 @@ const DATA = [
         time: "09:30",
         diagnosis: "удаление зуба",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Василий Петров",
           avatar:
             "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
@@ -114,6 +123,7 @@ const DATA = [
         time: "14:30",
         diagnosis: "повторный осмотр",
         user: {
+          phone: "+7 (999) 123-45-67",
           fullName: "Илон Маск",
           avatar:
             "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
