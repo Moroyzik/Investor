@@ -1,145 +1,26 @@
-import React from "react";
-import { SectionTitle, Appointment } from "../components/index";
+import React, {useState, useEffect} from "react";
+import { Ionicons } from "@expo/vector-icons";
+import axios from "axios";
+
+
 import { SectionList } from "react-native";
 import styled from "styled-components/native";
-import { Ionicons } from "@expo/vector-icons";
-
-const DATA = [
-  {
-    title: "14 сентября",
-    data: [
-      {
-        time: "15:30",
-        diagnosis: "пульпит",
-        active: true,
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Дима Морозов",
-          avatar:
-            "https://images.unsplash.com/photo-1578489758854-f134a358f08b?ixlib=rb-1.2.1&w=1000&q=80",
-        },
-      },
-      {
-        time: "17:30",
-        diagnosis: "повторный осмотр",
-        user: {
-          phone: "+7 (999) 123-23-45",
-          fullName: "Халк Николаев",
-          avatar:
-            "https://images.immediate.co.uk/production/volatile/sites/3/2017/10/TRB1420_comp_v422.1056-8e99dab.jpg?quality=90&resize=768,574",
-        },
-      },
-    ],
-  },
-  {
-    title: "18 сентября",
-    data: [
-      {
-        time: "09:30",
-        diagnosis: "удаление зуба",
-        user: {
-          phone: "+7 (999) 123-99-33",
-          fullName: "Василий Петров",
-          avatar:
-            "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
-        },
-      },
-      {
-        time: "14:30",
-        diagnosis: "повторный осмотр",
-        user: {
-          phone: "+7 (999) 123-11-00",
-          fullName: "Илон Маск",
-          avatar:
-            "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
-        },
-      },
-    ],
-  },
-  {
-    title: "18 сентября",
-    data: [
-      {
-        time: "09:30",
-        diagnosis: "удаление зуба",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Василий Петров",
-          avatar:
-            "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
-        },
-      },
-      {
-        time: "14:30",
-        diagnosis: "повторный осмотр",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Илон Маск",
-          avatar:
-            "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
-        },
-      },
-    ],
-  },
-  {
-    title: "18 сентября",
-    data: [
-      {
-        time: "09:30",
-        diagnosis: "удаление зуба",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Василий Петров",
-          avatar:
-            "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
-        },
-      },
-      {
-        time: "14:30",
-        diagnosis: "повторный осмотр",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Илон Маск",
-          avatar:
-            "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
-        },
-      },
-    ],
-  },
-  {
-    title: "18 сентября",
-    data: [
-      {
-        time: "09:30",
-        diagnosis: "удаление зуба",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Василий Петров",
-          avatar:
-            "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?resize=768%2C432",
-        },
-      },
-      {
-        time: "14:30",
-        diagnosis: "повторный осмотр",
-        user: {
-          phone: "+7 (999) 123-45-67",
-          fullName: "Илон Маск",
-          avatar:
-            "https://cdn.sm-news.ru/wp-content/uploads/2020/11/25/3b3f3b3e0e60d3adc8223a3d15a4ea6f05c45f57.jpg",
-        },
-      },
-    ],
-  },
-];
+import { SectionTitle, Appointment } from "../components/index";
 
 const HomeScreen = (props) => {
+  const [data, setData] = useState(null)
   const { navigation } = props;
+
+  useEffect(() => {
+    axios.get('https://trycode.pw/c/3VXJZ.json').then(({data}) => {
+      setData(data)
+    })
+  }, [])
 
   return (
     <Container>
       <SectionList
-        sections={DATA}
+        sections={data}
         keyExtractor={(index) => index}
         renderItem={({ item }) => (
           <Appointment navigate={navigation.navigate} item={item} />
