@@ -25,9 +25,11 @@ const Appointment = ({navigate, item}) => {
 };
 
 Appointment.defaultProps = {
-    groupTitel: "Untitled",
+    groupTitle: "Untitled",
     items: [],
 };
+
+//hello
 
 const GroupItem = styled.TouchableOpacity`
   align-items: center;
