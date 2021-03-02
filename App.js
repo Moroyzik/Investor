@@ -11,7 +11,7 @@ const AppNavigator = createStackNavigator(
     Home: {
       screen: HomeScreen,
       navigationOptions: {
-        title: "Пациенты",
+        title: "Друзья",
         headerTintColor: "#2a86ff",
         headerStyle: {
           elevation: 0.5,
@@ -22,7 +22,7 @@ const AppNavigator = createStackNavigator(
     Patient: {
       screen: PatientScreen,
       navigationOptions: {
-        title: "Карта пациента",
+        title: "Информация друга",
         headerTintColor: "#2a86ff",
         headerStyle: {
           elevation: 0.5,
